@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
+	"unicode"
 )
 
 func Task941() {
@@ -21,5 +23,17 @@ func ReadInput() string {
 	return message
 }
 func processMessage(message string) string {
+	answer := []string{}
+	for _, v := range message {
+		if unicode.IsUpper(v) {
+			message = strings.ToUpper(message)
+			break
+		}
+	}
+
+	for _, v := range message {
+		answer = append(answer, string(v))
+	}
+	return strings.Join(answer, " ")
 
 }
