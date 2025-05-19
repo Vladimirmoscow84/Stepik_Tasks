@@ -1,9 +1,12 @@
 package main
 
-import task942 "Stepik_tasks/internal/strings/task_9-4-2"
+import (
+	task82Pt23 "Stepik_tasks/internal/slices"
+)
 
 func main() {
 
 	//task941.Task941()
-	task942.Task942()
+	//task942.Task942()
+	task82Pt23.Task82Pt23()
 }
