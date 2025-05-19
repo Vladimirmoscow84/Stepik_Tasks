@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
 	"unicode"
 )
 
@@ -24,17 +23,14 @@ func ReadInput() string {
 	return message
 }
 func processMessage(message string) string {
-	answer := []string{}
-
+	sl1 := []rune{}
+	sl2 := []rune{}
 	for _, v := range message {
 		if unicode.IsUpper(v) {
-			answer = append(answer, string(v))
+			sl1 = append(sl1, v)
+		} else {
+			sl2 = append(sl2, v)
 		}
 	}
-	for _, v := range message {
-		if unicode.IsLower(v) {
-			answer = append(answer, string(v))
-		}
-	}
-	return strings.Join(answer, "")
+	return string(append(sl1, sl2...))
 }
