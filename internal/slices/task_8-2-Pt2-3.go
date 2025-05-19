@@ -38,8 +38,8 @@ func propagateLight(grid [][]int) [][]int {
 	for r := range grid {
 		for c := range grid[r] {
 			if grid[r][c] == 1 {
-				for ii := max(r-1, 0); ii < min(r+2, rows); ii++ {
-					for jj := max(c-1, 0); jj < min(c+2, cols); jj++ {
+				for ii := max(r-1, 0); ii <= min(r+1, rows-1); ii++ {
+					for jj := max(c-1, 0); jj <= min(c+1, cols-1); jj++ {
 						result[ii][jj] = 1
 					}
 				}
