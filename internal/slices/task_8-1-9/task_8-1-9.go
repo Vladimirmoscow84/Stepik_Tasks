@@ -1,4 +1,4 @@
-package task8113
+package task819
 
 import (
 	"bufio"
@@ -30,7 +30,7 @@ func gravitySwitch(grid [][]int) [][]int {
 	return slice
 }
 
-func Task8113() {
+func Task819() {
 	grid := ReadInput()
 	result, _ := json.Marshal(gravitySwitch(grid))
 	fmt.Println(string(result))
