@@ -1,7 +1,7 @@
 package main
 
 import (
-	task1018 "Stepik_tasks/internal/strings/task_10-1-8"
+	task1013 "Stepik_tasks/internal/strings/task_10-1-3"
 )
 
 func main() {
@@ -17,5 +17,6 @@ func main() {
 	//task1112.Task1112()
 	//task819.Task819()
 	//task9412.Task9412()
-	task1018.Task1018()
+	//task1018.Task1018()
+	task1013.Task1013()
 }
